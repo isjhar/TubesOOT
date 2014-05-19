@@ -17,21 +17,21 @@ import org.jhotdraw.draw.tool.BezierTool;
  * @author USER
  */
 public class PolygonButton extends JButton implements ActionListener{
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40;//inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40;//inisiasi dimensi lebar
     private PolygonToolBar toolbar;
     //mengatur tampilan button
     public PolygonButton(){
         super();
         this.toolbar = new PolygonToolBar();
-        setToolTipText("polygon button");
-        setIcon(new ImageIcon("polygon.png"));
+        setToolTipText("polygon button");//menampilkan popup text
+        setIcon(new ImageIcon("polygon.png"));//memberikan gambar pada button
         initDimension();
         
     }
     //pengimplementasian listener
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);//mengatur dimensi objek sesuai parameter input
         setPreferredSize(dimension);
     }
     
