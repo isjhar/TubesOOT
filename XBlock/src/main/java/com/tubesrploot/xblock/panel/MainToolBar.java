@@ -4,6 +4,7 @@
  */
 package com.tubesrploot.xblock.panel;
 
+//import library yang dibutuhkan
 import com.tubesrploot.xblock.button.MainToolBarRowPanel;
 import com.tubesrploot.xblock.button.ArrowButton;
 import com.tubesrploot.xblock.button.CursorButton;
@@ -23,33 +24,44 @@ import javax.swing.JToolBar;
  * @author Isjhar-pc
  */
 public class MainToolBar extends JToolBar{
-    private final int nHeight;
-    private final int nWidth;
+    private final int nHeight; //pendeklarasian variabel nHeight sebagai konstanta
+    private final int nWidth; //pendeklarasian variabel nWidth sebagai konstanta
+    //pembuatan variabel untuk membuat objek rowPanel
     private MainToolBarRowPanel rowPanel1, rowPanel2, rowPanel3, rowPanel4, rowPanel5, rowPanel6, rowPanel7,
             rowPanel8, rowPanel9, rowPanel10, rowPanel11;
+    //pembuatan variabel untuk membuat objek cursorButton
     private CursorButton cursorButton;
+    //pembuatan variabel untuk membuat objek lineButton
     private LineButton lineButton; 
+    //pembuatan variabel untuk membuat objek ellipseButton
     private EllipseButton ellipseButton;
+    //pembuatan variabel untuk membuat objekrectangleButton
     private RectangleButton rectangleButton;
+    //pembuatan variabel untuk membuat objek triangleButton
     private TriangleButton triangleButton;
+    //pembuatan variabel untuk membuat objek textButton
     private TextButton textButton;
+    //pembuatan variabel untuk membuat objek arrowButton
     private ArrowButton arrowButton;
+    //pembuatan variabel untuk membuat objek diamondButton
     private DiamondButton diamondButton;
+    //pembuatan variabel untuk membuat objek pencilButton
     private PencilButton pencilButton;
+    //pembuatan variabel untuk membuat objek polygonButton
     private PolygonButton polygonButton;
     
     
     public MainToolBar(int width, int height){
-        nHeight = height;
-        nWidth = width;
-        initDimension();
-        setOrientation(JToolBar.VERTICAL);
-        initComponent();
+        nHeight = height;//pemberian nilai pada konstanta nHeight
+        nWidth = width;//pemberian nilai pada konstanta nWidth
+        initDimension();//pemanggilan prosedur initDimension()
+        setOrientation(JToolBar.VERTICAL);//pemanggilan prosedur setOrientation() dengan parameter JToolBar.VERTICAL
+        initComponent();//pemanggilan prosedur initComponent()
     }
     //pengaturan ukuran dalam maintoolbar
     private void initDimension(){
-        Dimension dimension = new Dimension(nWidth, nHeight);
-        setPreferredSize(dimension);
+        Dimension dimension = new Dimension(nWidth, nHeight);//penginisiasian objek dimension dengan parameter nWidth dan nHeight
+        setPreferredSize(dimension);//pemanggilan prosedur setPreferredSize dengan parameter dimension
     }
     
     private void initComponent(){
