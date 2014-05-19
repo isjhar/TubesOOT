@@ -16,15 +16,15 @@ import org.jhotdraw.draw.tool.SelectionTool;
  * @author Isjhar-pc
  */
 public class TriangleButton extends JButton implements ActionListener{
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40;//inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40;//inisiasi dimensi lebar
     private TriangleToolBar toolbar;
     //mengatur tampilan button
     public TriangleButton(){
         super();
         this.toolbar = new TriangleToolBar();
-        setToolTipText("triangle button");
-        setIcon(new ImageIcon("triangle.png"));
+        setToolTipText("triangle button");//menampilkan popup text
+        setIcon(new ImageIcon("triangle.png"));//memberikan gambar pada button
         initDimension();
     }
     //pengimplementasian listener
@@ -32,7 +32,7 @@ public class TriangleButton extends JButton implements ActionListener{
         this.addActionListener(this);
     }
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT); //mengatur dimensi objek sesuai parameter input
         setPreferredSize(dimension);
     }
     
