@@ -17,21 +17,21 @@ import org.jhotdraw.draw.tool.CreationTool;
  * @author Isjhar-pc
  */
 public class LineButton extends JButton implements ActionListener{
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40; //inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40; //inisiasi dimensi lebar
     private LineToolBar toolbar;
     //mengatur tampilan button
     public LineButton(){
         super();
         this.toolbar = new LineToolBar();
-        setToolTipText("line button");
-        setIcon(new ImageIcon("line.png"));
+        setToolTipText("line button"); //menampilkan popup tex
+        setIcon(new ImageIcon("line.png")); //memberikan gambar pada button
         initDimension();
         
     }
     //pengimplementasian listener
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT); //mengatur dimensi objek sesuai parameter input
         setPreferredSize(dimension);
     }
     
