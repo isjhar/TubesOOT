@@ -11,10 +11,10 @@ import javax.swing.JMenuBar;
  * @author Isjhar-pc
  */
 public class MainMenuBar extends JMenuBar{
-    private FileMenu fileMenu;
+    private FileMenu fileMenu; 
     public MainMenuBar(){
         super();
-        fileMenu = new FileMenu();
-        add(fileMenu);
+        fileMenu = new FileMenu();//membuat objek baru
+        add(fileMenu); //menambahkan file menu
     }
 }
