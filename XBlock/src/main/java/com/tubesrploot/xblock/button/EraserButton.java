@@ -20,14 +20,14 @@ public class EraserButton extends JButton implements ActionListener {
     private static final int N_WIDTH = 40;
     private EraserToolBar toolbar;
     private Dimension dimension;
-    
+    //mengatur tampilan button
     public EraserButton(){
         super();
         this.toolbar = new EraserToolBar();
         setToolTipText("eraser button");
         initDimension();
     }
-    
+    //pengimplementasian listener
     private void initDimension(){
         dimension = new Dimension(N_WIDTH, N_HEIGHT);
         setPreferredSize(dimension);
@@ -46,7 +46,9 @@ public class EraserButton extends JButton implements ActionListener {
         root.add(toolbar);
         root.validate();
         root.repaint();
-        
+        //pemasangan objek dalam canvas
+        CanvasPanel canvas = (CanvasPanel) getParent().getParent().getParent().getParent().getComponent(1);
+        canvas.setActiveButton(this);
     }
     
 }
