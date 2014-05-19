@@ -17,22 +17,22 @@ import org.jhotdraw.draw.tool.CreationTool;
  * @author USER
  */
 public class DiamondButton extends JButton implements ActionListener{
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40; //inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40; //inisiasi dimensi lebar
     private DiamondToolBar toolbar;
     //mengatur tampilan button
     public DiamondButton(){
         super();
         this.toolbar = new DiamondToolBar();
-        setToolTipText("diamond button");
-        setIcon(new ImageIcon("diamond.png"));
+        setToolTipText("diamond button"); //menampilkan popup text
+        setIcon(new ImageIcon("diamond.png")); //memberikan gambar pada button
         initDimension();
         
     }
     //pengimplementasian listener
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
-        setPreferredSize(dimension);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT); //mengatur dimensi objek sesuai parameter input
+        setPreferredSize(dimension); 
     }
     
     public void setActionListener(){
