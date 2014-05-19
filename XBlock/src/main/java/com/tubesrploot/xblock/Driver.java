@@ -12,14 +12,15 @@ import javax.swing.SwingUtilities;
  *
  * @author Isjhar-pc
  */
+ //class main untuk menjalankan program
 class Driver {
     public static void main(String[] args){
         SwingUtilities.invokeLater(new Runnable() {
 
             @Override
             public void run() {
-                final GUI gui = new GUI();
-                gui.initGUI();
+                final GUI gui = new GUI(); //menginisiasi objek Gui
+                gui.initGUI();//melakukan pemanggilan objek Gui
             }
         });
     }
