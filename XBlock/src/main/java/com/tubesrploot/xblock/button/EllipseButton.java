@@ -17,20 +17,20 @@ import org.jhotdraw.draw.tool.CreationTool;
  * @author Isjhar-pc
  */
 public class EllipseButton extends JButton implements ActionListener {
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40; //inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40; //inisiasi dimensi lebar
     private EllipseToolBar toolbar;
     //mengatur tampilan button
     public EllipseButton(){
         super();
         this.toolbar = new EllipseToolBar();
-        setToolTipText("ellips button");
-        setIcon(new ImageIcon("ellipse.png"));
+        setToolTipText("ellips button"); //menampilkan popup text
+        setIcon(new ImageIcon("ellipse.png")); //memberikan gambar pada button
         initDimension();
     }
     //pengimplementasian listener
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT); //mengatur dimensi objek sesuai parameter input
         setPreferredSize(dimension);
     }
     
