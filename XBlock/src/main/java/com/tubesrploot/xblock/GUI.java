@@ -4,7 +4,7 @@
  */
 package com.tubesrploot.xblock;
 
-
+//pengimportan library yang dibutuhkan 
 import com.tubesrploot.xblock.menubar.MainMenuBar;
 import com.tubesrploot.xblock.button.CanvasPanel;
 import com.tubesrploot.xblock.button.ToolBarExtensionPanel;
@@ -21,26 +21,27 @@ import org.jhotdraw.draw.DrawingView;
  * @author Isjhar-pc
  */
 public class GUI {
-    private static final int HEIGHT = 600;
-    private static final int ROOT_WIDTH = 800;
-    private int marginTop = 20;
+    private static final int HEIGHT = 600;//inisiasi variabel HEIGHT sebagai konstanta
+    private static final int ROOT_WIDTH = 800;//inisiasi variabel ROOT_WIDTH sebagai konstanta
+    private int marginTop = 20;//pemberian nilai pada variabel marginTop
     
     public void initGUI(){
-        Dimension dimensionRootPanel = new Dimension(ROOT_WIDTH, HEIGHT);
-        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension dimensionRootPanel = new Dimension(ROOT_WIDTH, HEIGHT);//penginisiasian objek Dimension
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();//pemberian nilai pada variabel dim
         
-        FlowLayout layout = new FlowLayout();
-        DrawingView canvas = new DefaultDrawingView();
-        JFrame frame = new JFrame("XBlock");
-        ToolBarPanel toolbarPanel1 = new ToolBarPanel();
-        ToolBarExtensionPanel toolbarPanel2 = new ToolBarExtensionPanel();
-        CanvasPanel canvasPanel = new CanvasPanel(canvas);
-        MainMenuBar menuBar = new MainMenuBar();
+        FlowLayout layout = new FlowLayout();//penginisiasian objeck layout
+        DrawingView canvas = new DefaultDrawingView();//penginisiasian objek canvas
+        JFrame frame = new JFrame("XBlock");//penginisiasian  frame dengna nama XBlock
+        ToolBarPanel toolbarPanel1 = new ToolBarPanel();//penginisiasian objek toolbarPanel1
+        ToolBarExtensionPanel toolbarPanel2 = new ToolBarExtensionPanel();//penginisiasian objek toolbarPanel2
+        CanvasPanel canvasPanel = new CanvasPanel(canvas);//penginisiasian objek canvas
+        MainMenuBar menuBar = new MainMenuBar();//penginisiasian objek menuBar
         
         // set layout
         layout.setHgap(0);
         layout.setVgap(0);
-       
+        
+        //pengesetan semua objek kedalam frame 
         frame.setLayout(layout);
         frame.setSize(dimensionRootPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -52,6 +53,7 @@ public class GUI {
         frame.setJMenuBar(menuBar);
         frame.pack();
         
+        //membuat frame muncul (visible) ketika di run
         frame.setVisible(true);        
     }
 }
