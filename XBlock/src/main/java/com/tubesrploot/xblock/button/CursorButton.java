@@ -16,15 +16,15 @@ import org.jhotdraw.draw.tool.SelectionTool;
  * @author Isjhar-pc
  */
 public class CursorButton extends JButton implements ActionListener{
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40; //inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40; //inisiasi dimensi lebar
     private CursorToolBar toolbar;
     //mengatur tampilan button
     public CursorButton(){
         super();
         this.toolbar = new CursorToolBar();
-        setToolTipText("cursor button");
-        setIcon(new ImageIcon("cursor_arrow.png"));
+        setToolTipText("cursor button"); //menampilkan popup text
+        setIcon(new ImageIcon("cursor_arrow.png"));//memberikan gambar pada button
         initDimension();
     }
     
@@ -33,7 +33,7 @@ public class CursorButton extends JButton implements ActionListener{
         this.addActionListener(this);
     }
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT); //mengatur dimensi objek sesuai parameter input
         setPreferredSize(dimension);
     }
     
