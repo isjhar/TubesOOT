@@ -14,8 +14,8 @@ import javax.swing.JMenuItem;
 public class FileMenu extends JMenuItem{
     public FileMenu(){
         super();
-        setLabel("File");
+        setLabel("File"); //memberika nama label
         setMnemonic(KeyEvent.VK_F);
-        getAccessibleContext().setAccessibleDescription("file menu");
+        getAccessibleContext().setAccessibleDescription("file menu"); //memberikan deskripsi ketika diakses
     }
 }
