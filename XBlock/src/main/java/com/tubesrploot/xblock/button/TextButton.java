@@ -19,20 +19,20 @@ import org.jhotdraw.draw.tool.TextCreationTool;
  * @author Isjhar-pc
  */
 public class TextButton extends JButton implements ActionListener{
-    private static final int N_HEIGHT = 40;
-    private static final int N_WIDTH = 40;
+    private static final int N_HEIGHT = 40;//inisiasi dimensi tinggi
+    private static final int N_WIDTH = 40;//inisiasi dimensi lebar
     private RectangleToolBar toolbar;
     //mengatur tampilan button
     public TextButton(){
         super();
         this.toolbar = new RectangleToolBar();
-        setToolTipText("text button");
-        setIcon(new ImageIcon("text.png"));
+        setToolTipText("text button");//menampilkan popup text
+        setIcon(new ImageIcon("text.png"));//memberikan gambar pada button
         initDimension();
     }
     //pengimplementasian listener
     private void initDimension(){
-        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);
+        Dimension dimension = new Dimension(N_WIDTH, N_HEIGHT);//mengatur dimensi objek sesuai parameter input
         setPreferredSize(dimension);
     }
     
